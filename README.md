@@ -14,7 +14,8 @@ Fetch an user API token from pagerduty.com.
 
 ### Pre reqs
 
--> brew (https://docs.brew.sh/Installation) 
+-> brew (https://docs.brew.sh/Installation)
+
 -> Xcode (Apple App Store) 
 
 ### Setup
