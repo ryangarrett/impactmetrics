@@ -2,7 +2,7 @@
 Script to generate some observations to impact data service
 
 
-## To Run:
+## PagerDuty Setup:
 
 Fetch an user API token from pagerduty.com.
 ```
@@ -12,12 +12,22 @@ Fetch an user API token from pagerduty.com.
 -> Under API Access, create User API Token
 ```
 
+### Pre reqs
+
+-> brew (https://docs.brew.sh/Installation) 
+-> Xcode (Apple App Store) 
+
 ### Setup
 
-Make sure [brew](https://brew.sh) is installed
 ```
+$ brew install python
+$ brew install pip
 $ brew install pipenv
-$ pipenv install
+$ vi ~/.bash_profile --> Add the below aliases. DO NOT UNINSTALL PYTHON 2.x<-- 
+	alias python='python3' 
+	alias pip='pip3'
+$ pipenv install requests
+$ pip install python-dateutil
 ```
 
 ### Things you will want to change in the script file (script.py):
@@ -37,8 +47,8 @@ PHE0HY6
 Change the start and end time for the data you want to fill in (times in UTC, can use: https://coderstoolbox.net/unixtimestamp/)
 
 ```
-startTime = parser.parse('2018-09-12T10:00:00Z')
-endTime = parser.parse('2018-09-13T07:00:00Z') # summit end
+startTime = parser.parse('2018-09-28T20:58:01Z')
+endTime = parser.parse('2018-09-28T21:20:01Z') # summit end
 ```
 
 
